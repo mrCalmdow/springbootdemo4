@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>upload</title>
+</head>
+<body>
+
+    <div>
+        <span style="align-content: center">单文件上传</span>
+        <form method="post" enctype="multipart/form-data" action="/uploads/file">
+            <span>
+                <input name="file" type="file" />
+                <input type="submit" value="上传" />
+            </span>
+        </form>
+    </div>
+    <br/>
+
+    <div>
+        <span style="align-content: center">多文件上传</span>
+        <form method="post" action="/uploads/files">
+            <span>
+                文件1：<input name="files" type="file" value="file1" />
+                文件2：<input name="files" type="file" value="file2" />
+                文件3：<input name="files" type="file" value="file3" />
+                <input type="submit" value="上传" />
+            </span>
+        </form>
+    </div>
+    <br/>
+
+    <div>
+        <span style="align-content: center">base64文件上传</span>
+        <form method="post" enctype="multipart/form-data" action="/uploads/base64">
+            <span>
+                base64内容：<textarea name="base64" value="file1"></textarea>
+                <input type="submit" value="上传">
+            </span>
+        </form>
+    </div>
+</body>
+</html>
